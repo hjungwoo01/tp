@@ -40,8 +40,8 @@
    - [What happens to your feedback](#what-happens-to-your-feedback)
 9. [Appendix: Requirements](#appendix-requirements)
 10. [Appendix: Effort](#appendix-effort)
-10. [Appendix: Instructions for manual testing](#appendix-instructions-for-manual-testing)
-11. [Appendix: Glossary](#glossary)
+11. [Appendix: Instructions for manual testing](#appendix-instructions-for-manual-testing)
+12. [Appendix: Glossary](#glossary)
 
 ---
 
