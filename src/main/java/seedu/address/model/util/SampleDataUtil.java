@@ -31,8 +31,8 @@ public class SampleDataUtil {
         employee1.addTask(new Description("Restock cleaning supplies"));
         employee1.addTask(new Description("Clean conference room"));
         employee1.addTask(new Description("Organize storage closet"));
+        employee1.markTask(0);
         employee1.markTask(1);
-        employee1.markTask(2);
 
         Employee employee2 = new Employee(new Name("Fiona Kunz"), new Phone("94821427"),
                 new Email("fiona.k@example.com"),
@@ -43,8 +43,7 @@ public class SampleDataUtil {
         employee2.addTask(new Description("Order vegetables"));
         employee2.addTask(new Description("Update recipe book"));
         employee2.addTask(new Description("Clean kitchen"));
-        employee2.markTask(1);
-        employee2.markTask(3);
+        employee2.markTask(2);
 
         Employee employee3 = new Employee(new Name("George Best"), new Phone("94821442"),
                 new Email("george.b@example.com"),
@@ -54,7 +53,7 @@ public class SampleDataUtil {
         employee3.addTask(new Description("Schedule weekly meeting"));
         employee3.addTask(new Description("Review project timeline"));
         employee3.addTask(new Description("Update event calendar"));
-        employee3.markTask(1);
+        employee3.markTask(0);
 
         Employee employee4 = new Employee(new Name("John Doe"), new Phone("98765432"), new Email("john.d@example.com"),
                 new Address("311, Clementi Ave 2, #02-25, Singapore"), new Team("A"), new Role("Manager"),
@@ -63,7 +62,7 @@ public class SampleDataUtil {
         employee4.addTask(new Description("Review team performance"));
         employee4.addTask(new Description("One on one with Sarah"));
         employee4.addTask(new Description("Budget planning"));
-        employee4.markTask(1);
+        employee4.markTask(0);
 
         Employee employee5 = new Employee(new Name("Hannah Stone"), new Phone("98765098"),
                 new Email("hannah.s@example.com"),
@@ -73,7 +72,7 @@ public class SampleDataUtil {
         employee5.addTask(new Description("Onboarding new employees"));
         employee5.addTask(new Description("Arrange training sessions"));
         employee5.addTask(new Description("Update HR policies"));
-        employee5.markTask(2);
+        employee5.markTask(1);
 
         Employee employee6 = new Employee(new Name("Ian Smith"), new Phone("98765512"), new Email("ian.s@example.com"),
                 new Address("122 South St, Boston, MA"), new Team("B"), new Role("Technician"),
@@ -82,7 +81,7 @@ public class SampleDataUtil {
         employee6.addTask(new Description("Repair HVAC system"));
         employee6.addTask(new Description("Inspect wiring at new site"));
         employee6.addTask(new Description("Submit maintenance report"));
-        employee6.markTask(2);
+        employee6.markTask(1);
 
         Employee employee7 = new Employee(new Name("Julie Tan"), new Phone("98765411"),
                 new Email("julie.t@example.com"), new Address("123 Orchard Road, Singapore"), new Team("A"),
