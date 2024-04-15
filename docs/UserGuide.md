@@ -90,7 +90,7 @@ Embark on your ContactSwift journey with these straightforward steps:
 4. **Launch**: Open a command terminal, navigate to your home folder, and initiate the application with `java -jar contactswift.jar`. The GUI, populated with sample data, will appear as shown below:
 
 <div align="center">
-    <img src="./images/Ui.png" alt="ContactSwift Main Interface" width="725"><br>
+    <img src="./images/annotatedUi.png" alt="ContactSwift Main Interface" width="725"><br>
     <em>Figure 1: The main interface of ContactSwift, showcasing sample data.</em>
 </div>
 
