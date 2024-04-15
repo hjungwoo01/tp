@@ -413,13 +413,16 @@ Format: `exit`
 
 ### Saving the Data
 
-ContactSwift data are saved in the hard disk automatically after any command that changes the data. There is no need to save manually.
+ContactSwift data are saved on the hard disk automatically after any command that changes the data. There is no need to save manually.
 
 **Note:** While ContactSwift attempts to save automatically, it's good practice to regularly back up your data file, especially before making bulk changes or updates.
 
 <box type="warning">
 
-**Caution:** If your changes to the data file make its format invalid, ContactSwift will discard all data and start with an empty data file or template data at the next run. We recommend taking a backup of the file before editing it. Furthermore, certain edits can cause ContactSwift to behave in unexpected ways (e.g., if a value entered is outside the acceptable range). Edit the data file only if you are confident that you can update it correctly.
+**Caution:**
+- **Data Format Validity**: If your changes to the data file make its format invalid, ContactSwift will discard all data and start with an empty data file or template data at the next run. We recommend taking a backup of the file before editing it.
+- **Unexpected Behavior**: Certain edits can cause ContactSwift to behave in unexpected ways, such as if a value entered is outside the acceptable range. Edit the data file only if you are confident that you can update it correctly.
+- **UID Size**: If you choose to edit the JSON file directly, ensure not to assign excessively large UIDs. Overly large UIDs may not be handled properly by the system and could lead to performance issues or errors.
 </box>
 
 [Back to table of contents](#table-of-contents)
