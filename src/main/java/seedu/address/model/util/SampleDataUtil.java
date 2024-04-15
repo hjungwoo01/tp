@@ -88,12 +88,6 @@ public class SampleDataUtil {
                 new Email("julie.t@example.com"), new Address("123 Orchard Road, Singapore"), new Team("A"),
                 new Role("Manager"), getTagSet("pendingReview", "teamLead"), new UniqueId("1010"));
 
-        employee7.addTask(new Description("Finalize quarterly report"));
-        employee7.addTask(new Description("Plan team outing"));
-        employee7.addTask(new Description("Conduct performance reviews"));
-        employee7.markTask(1);
-        employee7.markTask(3);
-
         Employee employee8 = new Employee(new Name("John Doe"), new Phone("98765432"),
                 new Email("johnd@example.com"), new Address("John street, block 123, #01-01"), new Team("A"),
                 new Role("Manager"), getTagSet(), new UniqueId("1011"));
