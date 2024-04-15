@@ -192,8 +192,8 @@ Examples:
 - `find alice david` returns `Alice Smith`, `David Williams`<br>
 
 <div align="center">
-    <img src="./images/findAliceDavidResult.png" alt="find alex david"><br>
-    <em>Figure 3: The result for <code>find alex david</code></em>
+    <img src="./images/findAliceDavidResult.png" alt="find alice david"><br>
+    <em>Figure 3: The result for <code>find alice david</code></em>
 </div>
 
 <br><br>
@@ -216,13 +216,13 @@ This command filters the list of employees based on their name, tags, roles, or 
 - When filtering by team, prepend "Team " to the team name (e.g., `T/Team HR`) to ensure accurate filtering.
 - Name and team fields are case-insensitive, meaning they do not require an exact match of case to filter correctly. For instance, `T/Team HR` is equivalent to `T/team hr`.
 - Role and tag fields are case-sensitive, meaning they require an exact match of case to filter correctly. For instance, `r/Manager` will not match `r/manager`.
-- Name must be an exact match, however it is case-insensitive. For instance, `n/jane` will not match `Jane Doe`. It must be the full name `n/jane doe`.
+- Name must be an exact match, however it is case-insensitive. For instance, `n/john` will not match `John Doe`. It must be the full name `n/john doe`.
 - The order of the parameters does not matter. e.g. `filter n/John Doe t/friend` will produce the same output as `filter t/friend n/John Doe`.
 
 Examples:
 
 - `filter t/friend t/Colleague` : Shows all employees tagged as `friend` and `Colleague`, respecting case for tags.
-- `filter n/jane doe` : Shows employees named `Jane Doe`, regardless of the case used in the filter.
+- `filter n/john doe` : Shows employees named `John Doe`, regardless of the case used in the filter.
 - `filter r/Executive T/TEAM SALES` : Shows employees with the role `Executive` (exact case match required) and in the 'Sales' team, regardless of how the team name's case is entered.
 - `filter t/colleague T/TEAM 2 r/Cleaner` should produce a similar output as below:
 
