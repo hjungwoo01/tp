@@ -16,10 +16,10 @@ This guide will equip you with everything you need to maximize the benefits of C
 
 ContactSwift offers a robust suite of features to manage employee contacts and task assignments effortlessly:
 
-- **Rapid Contact Management**: Quickly add, delete, update, and search for contacts using intuitive CLI commands or through the GUI.
-- **Advanced Task Tracking**: Assign tasks to contacts, set deadlines, and track progress to enhance productivity.
-- **Sophisticated Filtering System**: Filter contacts by tags, roles, teams, or other criteria to efficiently organize and retrieve employee information.
-- **Unique ID System**: Each contact in ContactSwift is assigned a [unique identifier (UID)](#unique-identifier-uid), ensuring precise and efficient management of contact details. This UID is key to performing actions like editing, deleting, or adding tasks for specific contacts. You will encounter these UIDs as you use various commands, offering a streamlined way to manage large datasets. This system is designed to enhance the user experience, enabling you to easily deal with duplicates!
+- **Rapid Contact Management**: Quickly add, delete, update, and search for contacts using intuitive CLI commands.
+- **Advanced Task Tracking**: Assign tasks to contacts and track their progress to enhance productivity.
+- **Sophisticated Filtering System**: Filter contacts by name, tags, roles, or teams to efficiently organize and retrieve employee information.
+- **Unique ID System**: Each contact in ContactSwift is assigned an [unique identifier (UID)](#unique-identifier-uid), ensuring precise and efficient management of contact details. This UID is key to performing actions like editing, deleting, or adding tasks for specific contacts. You will encounter these UIDs as you use various commands, offering a streamlined way to manage large datasets. This system is designed to enhance the user experience, enabling you to easily deal with duplicates!
 
 <box type="warning">
 Data modifications may cause unexpected errors. It is recommended to back up the data file before making any changes. Please refer to the Saving the Data section for more information.
@@ -90,7 +90,7 @@ Embark on your ContactSwift journey with these straightforward steps:
 4. **Launch**: Open a command terminal, navigate to your home folder, and initiate the application with `java -jar contactswift.jar`. The GUI, populated with sample data, will appear as shown below:
 
 <div align="center">
-    <img src="./images/annotatedUi.png" alt="ContactSwift Main Interface" width="725"><br>
+    <img src="./images/annotatedUi.png" alt="ContactSwift Main Interface" width="850"><br>
     <em>Figure 1: The main interface of ContactSwift, showcasing sample data.</em>
 </div>
 
@@ -169,7 +169,7 @@ Examples:
 <box type="warning">
 
 **Caution:**
-- **Phone Number**: Ensure the `PHONE_NUMBER` is valid; ContactSwift does not accept phone numbers with fewer than 3 digits or more than 15 digits to maintain uniformity and ensure all numbers are fully visible in the user interface.
+- **Phone Number**: Ensure the `PHONE_NUMBER` is valid; ContactSwift does not accept phone numbers with fewer than 3 digits. Do not make the `PHONE_NUMBER` more than 15 digits to maintain uniformity and ensure all numbers are fully visible in the user interface.
 - **Name Length**: Keep names reasonably short to ensure full visibility in the user interface.
 - **Email Length**: Use concise email addresses to prevent them from extending beyond the UI's visible space.
 - **Address Length**: Opt for shorter addresses to enhance visibility and readability in the interface.
@@ -208,7 +208,7 @@ Examples:
 
 ### Filter employees by name, tags, roles, or teams: `filter`
 
-The `filter` command is used to search for employees based on specific attributes such as their name, tags, roles, or teams. This powerful tool allows you to narrow down the list of employees to those who meet certain criteria, making it easier to manage and interact with your employees.
+The `filter` command is used to search for employees based on specific attributes such as their name, tags, role, or team. This powerful tool allows you to narrow down the list of employees to those who meet certain criteria, making it easier to manage and interact with your employees.
 
 Format: `filter [n/NAME] [t/TAG] [r/ROLE] [T/TEAM]`
 
@@ -216,7 +216,7 @@ Format: `filter [n/NAME] [t/TAG] [r/ROLE] [T/TEAM]`
 
 **Note:** If no parameters are provided, the command will fail to execute, showing the message: "No valid fields present for filter command".
 
-This command filters the list of employees based on their name, tags, roles, or teams.
+This command filters the list of employees based on their name, tags, role, or team.
 
 - Filters the employee list according to the specified criteria.
 - Employees matching all provided criteria will be listed (i.e., `AND` search).
@@ -235,7 +235,7 @@ Examples:
 - `filter t/colleague T/TEAM 2 r/Cleaner` should produce a similar output as below:
 
 <div align="center">
-    <img src="./images/filterTagTeamRole.png" alt="Filter result" width="400"><br>
+    <img src="./images/filterTagTeamRole.png" alt="Filter result" width="550"><br>
     <em>Figure 4: The result for <code>filter t/colleague T/TEAM 2 r/Cleaner</code></em>
 </div>
 
@@ -273,9 +273,7 @@ Format: `delete INDEX` or `delete uid/UID` or `delete NAME`
 - The UID refers to the user ID displayed beside the employee's name.
 - The name must be an exact match, however it is case-insensitive.
 
-**Caution:** Deleting an employee is irreversible. Ensure you have selected the correct `INDEX`, `UID`, or `NAME` before proceeding.
-
-<br>
+**Caution:** Deleting an employee is irreversible. Ensure you have typed the correct `INDEX`, `UID`, or `NAME` before proceeding.
 
 Examples:
 
@@ -435,6 +433,8 @@ _`[coming in v2.0]` Sneak Peak:_
 
 In version 2.0 of ContactSwift, we introduce a robust data archiving feature designed to enhance data management by allowing you to securely store and back up important contact and task information. This feature is crucial for maintaining a clean and organized database, especially as your dataset grows over time.
 
+<div style="page-break-before: always;"></div>
+
 #### Why Archive Data?
 
 Archiving data helps in reducing the load on the main database, improving performance, and securing **a historical record of your data** that can be accessed or retrieved if necessary. It is particularly useful for maintaining compliance with data retention policies and for organizational audits.
@@ -470,6 +470,7 @@ Stay tuned for the release of ContactSwift v2.0 to experience the benefits of da
 [Back to table of contents](#table-of-contents)
 
 ---
+<div style="page-break-before: always;"></div>
 
 ## Managing your employees
 
@@ -601,6 +602,10 @@ Confidentiality: Avoid sharing sensitive or confidential information in public f
 Your insights and contributions are invaluable to us and help ensure that ContactSwift continues to evolve in ways that meet and exceed user needs and expectations. Thank you for helping us improve and for being an active member of our community.
 
 [Back to table of contents](#table-of-contents)
+
+---
+
+<div style="page-break-before: always;"></div>
 
 ## Glossary
 
