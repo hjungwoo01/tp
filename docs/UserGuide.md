@@ -168,7 +168,15 @@ Examples:
 
 <box type="warning">
 
-**Caution:** Ensure the `PHONE_NUMBER` is valid; ContactSwift does not accept phone numbers with less than 3 digits.
+**Caution:**
+- **Phone Number**: Ensure the `PHONE_NUMBER` is valid; ContactSwift does not accept phone numbers with fewer than 3 digits or more than 15 digits to maintain uniformity and ensure all numbers are fully visible in the user interface.
+- **Name Length**: Keep names reasonably short to ensure full visibility in the user interface.
+- **Email Length**: Use concise email addresses to prevent them from extending beyond the UI's visible space.
+- **Address Length**: Opt for shorter addresses to enhance visibility and readability in the interface.
+- **Role and Team Names**: Keep role and team names succinct to avoid truncation in the display.
+- **Tag Descriptions**: Limit tag descriptions to ensure they are brief and avoid cluttering the UI.
+- **Number of Tags**: While multiple tags are supported, adding too many can obscure visibility, making it difficult to see all tags in the user interface.
+
 </box>
 
 [Back to table of contents](#table-of-contents)
@@ -196,7 +204,7 @@ Examples:
     <em>Figure 3: The result for <code>find alice david</code></em>
 </div>
 
-<br><br>
+<br>
 
 ### Filter employees by name, tags, roles, or teams: `filter`
 
@@ -305,6 +313,14 @@ Examples:
 - `addTask uid/1 Complete the report by 5pm`
 - `addTask uid/2 Submit the proposal by 10am`
 
+<box type="warning">
+
+**Caution:**
+- **UID Validity:** Ensure the UID corresponds to an existing employee. Invalid UIDs will result in an error.
+- **Task Description Length:** Keep the task description concise. Excessively long descriptions may not be fully visible in the user interface and can complicate task management.
+- **Character Restrictions:** The description should only include alphanumeric characters and spaces. Special characters are not supported and may lead to unexpected errors.
+</box>
+
 [Back to table of contents](#table-of-contents)
 
 ### Mark a task as completed: `mark`
@@ -397,13 +413,16 @@ Format: `exit`
 
 ### Saving the Data
 
-ContactSwift data are saved in the hard disk automatically after any command that changes the data. There is no need to save manually.
+ContactSwift data are saved on the hard disk automatically after any command that changes the data. There is no need to save manually.
 
 **Note:** While ContactSwift attempts to save automatically, it's good practice to regularly back up your data file, especially before making bulk changes or updates.
 
 <box type="warning">
 
-**Caution:** If your changes to the data file make its format invalid, ContactSwift will discard all data and start with an empty data file or template data at the next run. We recommend taking a backup of the file before editing it. Furthermore, certain edits can cause ContactSwift to behave in unexpected ways (e.g., if a value entered is outside the acceptable range). Edit the data file only if you are confident that you can update it correctly.
+**Caution:**
+- **Data Format Validity**: If your changes to the data file make its format invalid, ContactSwift will discard all data and start with an empty data file or template data at the next run. We recommend taking a backup of the file before editing it.
+- **Unexpected Behavior**: Certain edits can cause ContactSwift to behave in unexpected ways, such as if a value entered is outside the acceptable range. Edit the data file only if you are confident that you can update it correctly.
+- **UID Size**: If you choose to edit the JSON file directly, ensure not to assign excessively large UIDs. Overly large UIDs may not be handled properly by the system and could lead to performance issues or errors.
 </box>
 
 [Back to table of contents](#table-of-contents)
