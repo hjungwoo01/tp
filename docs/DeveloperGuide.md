@@ -39,8 +39,9 @@
    - [Feedback Etiquette](#feedback-etiquette)
    - [What happens to your feedback](#what-happens-to-your-feedback)
 9. [Appendix: Requirements](#appendix-requirements)
-10. [Appendix: Instructions for manual testing](#appendix-instructions-for-manual-testing)
-11. [Appendix: Glossary](#glossary)
+10. [Appendix: Effort](#appendix-effort)
+11. [Appendix: Instructions for manual testing](#appendix-instructions-for-manual-testing)
+12. [Appendix: Glossary](#glossary)
 
 ---
 
@@ -303,12 +304,23 @@ Step 2. The `DeleteCommand` is executed, calling `Model#deleteEmployee(target)`,
 
 ### Filter Command Implementation
 
-The `FilterCommand` allows users to refine the list of employees displayed based on specified criteria such as name, role, team, and tags. This functionality is pivotal for efficiently managing large datasets of employees and ensuring that users can easily access subsets of employee data that meet specific criteria.
+The `FilterCommand` implements the `Command` interface to filter and display subsets of employees based on specified criteria such as name, role, team, and tags. This capability is crucial for managing large datasets of employees and ensuring that subsets of data are readily accessible to users based on their specific needs.
 
 #### Implementation Details
 
-- **Parsing Input**: The `FilterCommandParser` parses the user input and constructs a `FilterCommand` object. This object includes a predicate representing the filtering criteria based on the user's command input.
-- **Applying the Filter**: The `FilterCommand` executes using the `Model#updateFilteredEmployeeList(Predicate<Employee> predicate)` method, which applies the constructed predicate to filter the employee list in the model.
+Given below is how the `FilterCommand` operates:
+
+**Step 1.** The user inputs the criteria using `prefixes` that define the filtering conditions, which are `n/Name`, `r/Role`, `T/Team`, and `t/Tag`. The `FilterCommandParser` parses these inputs and constructs a `Predicate<Employee>` that encapsulates these criteria.
+
+**Step 2.** The `FilterCommand`, holding the constructed predicate, is then passed to the `execute` method.
+
+**Step 3.** Within the `execute` method, the `FilterCommand` invokes the `updateFilteredEmployeeList` method on the `Model`, passing the `Predicate<Employee>`.
+
+**Step 4.** The `Model` applies this predicate to filter the list of employees according to the specified criteria, effectively updating the list to show only those employees who meet the conditions.
+
+This is the sequence diagram that describes the steps:
+
+<puml src="diagrams/FilterSequenceDiagram.puml" width="650" />
 
 #### Example Usage Scenario
 
@@ -796,6 +808,36 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 9. Memory Usage: The application should operate efficiently within 500 MB of memory and should not exceed 0.5 GB of memory usage, even with an address book size of up to 50,000 employees, optimizing resource utilization.
 
 [Back to table of contents](#table-of-contents)
+
+---
+
+## **Appendix: Effort**
+
+This appendix provides an overview of the efforts involved in the development of our enhanced contact and task management application, which evolved from the original AB3 code base. This section details the difficulty level, challenges faced, effort required, and the achievements of the project.
+
+### Difficulty Level
+The project began with the AB3 code base, a basic contact management system. Transitioning this into a more comprehensive tool that includes both contact and task management introduced significant complexity. The addition of task management required substantial modifications to the system's architecture and data handling capabilities.
+
+### Challenges Faced
+1. **Integration of New Features**: Merging task management capabilities with the existing contact features was a primary challenge. This included integrating unique identifiers for each employee, and enabling functionalities like delete by name, delete by UID, filter, add tasks, delete tasks, mark and unmark tasks.
+2. **User Interface Enhancement**: While the primary focus was not on enhancing the interface for additional functionalities, a significant effort was made to improve the overall aesthetic and user interaction quality of the interface. This involved redesigning elements to make the interface more visually appealing and engaging for users.
+
+### Effort Required
+The project demanded extensive commitment from our development team over several weeks:
+- **Research and Planning**: Initial phases involved in-depth analysis of the AB3 code base to identify the best approaches for integrating new functionalities without disrupting the core features.
+- **Development and Implementation**: Significant time was spent developing the new features, ensuring they were seamlessly integrated with the existing system components.
+- **Testing and Refinement**: Following development, rigorous testing was conducted to ensure the new features functioned as intended and met user requirements.
+
+### Achievements
+1. **Enhanced Functionality**: The project successfully transformed a simple contact management tool into a robust application capable of managing both contacts and tasks effectively. The addition of task management features notably expanded the application’s utility.
+2. **Improved User Interface**: The user interface was overhauled not just for functionality but to enhance visual appeal, making the application more user-friendly and attractive.
+3. **Added Features**: Successfully implemented several new features, including:
+    - **Unique Identifier for Each Employee**: Facilitated precise operations like delete and task assignments.
+    - **Delete by Name and UID**: Provided flexible options for user interactions.
+    - **Task Management**: Added comprehensive task management capabilities including adding, deleting, marking, and unmarking tasks.
+    - **Filtering Capability**: Enhanced the ability to sift through large sets of employee data based on various criteria.
+
+In conclusion, the development of this enhanced contact and task management application was a substantial effort that required overcoming significant challenges and demanded a high level of dedication and expertise from the entire team. The project’s success in integrating robust task management features into the existing contact management framework marks a significant enhancement over the original AB3 code base, tailored specifically to meet the evolving needs of our users.
 
 ---
 
