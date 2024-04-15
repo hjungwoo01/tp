@@ -17,16 +17,16 @@ public class SampleDataUtilTest {
     @Test
     public void getSampleEmployees() {
         Employee[] sampleEmployees = SampleDataUtil.getSampleEmployees();
-        assertEquals(6, sampleEmployees.length);
-        assertEquals(new UniqueId("101"), sampleEmployees[0].getUid());
-        assertEquals(new UniqueId("106"), sampleEmployees[5].getUid());
+        assertEquals(9, sampleEmployees.length);
+        assertEquals(new UniqueId("1004"), sampleEmployees[0].getUid());
+        assertEquals(new UniqueId("1009"), sampleEmployees[5].getUid());
     }
 
     @Test
     public void getSampleAddressBook() {
         ReadOnlyAddressBook sampleAb = SampleDataUtil.getSampleAddressBook();
         assertTrue(sampleAb instanceof AddressBook);
-        assertEquals(6, sampleAb.getEmployeeList().size());
+        assertEquals(9, sampleAb.getEmployeeList().size());
     }
 
     @Test
